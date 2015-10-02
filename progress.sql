@@ -28,3 +28,11 @@ $$
 --select newtask(1, 'Buy Groceries','Milk, Cheese, Pizza, Fruit, Tylenol', false); 
 --select newtask(2, 'Learn Python','Need to find a good Python tutorial on the web', false); 
 
+create or replace function gettasks(out int8, out text, out text, out boolean) returns setof record as
+$$
+   select id, title, description, done from tasks;
+
+$$
+ language 'sql';
+ 
+--select * from gettasks();
