@@ -46,3 +46,26 @@ $$
  
 --select * from gettaskid(2);
 
+create table userpass (
+    username text primary key,
+    password text
+);
+
+
+insert into userpass (username, password) values ('ako', 'akolagini');
+
+create or replace function getpassword(par_username text) returns text as
+$$
+  declare
+    loc_password text;
+  begin
+     select into loc_password password from userpass where username = par_username;
+     if loc_password isnull then
+       loc_password = 'null';
+     end if;
+     return loc_password;
+ end;
+$$
+ language 'plpgsql';
+
+select getpassword('ako');
