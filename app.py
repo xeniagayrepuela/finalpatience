@@ -1,12 +1,14 @@
 #!flask/bin/python
 from flask import Flask, jsonify
+from flask.ext.httpauth import HTTPBasicAuth
 from model import DBconn
-import flask
+import sys,flask
+
 
 
 
 app = Flask(__name__)
-
+auth = HTTPBasicAuth()
 
 def spcall(qry, param, commit=False):
     try:
@@ -21,6 +23,9 @@ def spcall(qry, param, commit=False):
         res = [("Error: " + str(sys.exc_info()[0]) + " " + str(sys.exc_info()[1]),)]
     return res
 
+@auth.get_password
+def getpassword(username):
+    return spcall("getpassword", (username,))[0][0]
 
 
 @app.route('/')
@@ -29,6 +34,7 @@ def index():
 
 
 @app.route('/tasks', methods=['GET'])
+@auth.login_required
 def getalltasks():
     res = spcall('gettasks', ())
 
