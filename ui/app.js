@@ -12,6 +12,10 @@ $.ajax({
 				}
     		},
     		error: function (e) {
-        		alert("danger", "Something Went Wrong!");
+        		alert("danger");
+   			},
+                beforeSend: function (xhrObj){
+          		xhrObj.setRequestHeader("Authorization",
+                        "Basic " + btoa("ako:akolagini"));
    			}
 		}); 
