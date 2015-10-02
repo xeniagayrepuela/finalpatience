@@ -5,7 +5,7 @@ $.ajax({
     		success: function(resp) {
 
 				if (resp.status  == 'ok') {
-					console.log();
+					console.log(resp);
 				} else
 				{
 					console.log(resp.message);

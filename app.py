@@ -1,6 +1,7 @@
 #!flask/bin/python
 from flask import Flask, jsonify
 from model import DBconn
+import flask
 
 
 
@@ -41,13 +42,29 @@ def getalltasks():
 
 @app.route('/tasks/<int:id>/<string:title>/<string:description>/<string:done>')
 def inserttask(id, title, description, done):
-    
+
     res = spcall("newtask", (id, title, description, done=='true'), True)
 
     if 'Error' in res[0][0]:
         return jsonify({'status': 'error', 'message': res[0][0]})
 
     return jsonify({'status': 'ok', 'message': res[0][0]})
+
+@app.after_request
+def add_cors(resp):
+    resp.headers['Access-Control-Allow-Origin'] = flask.request.headers.get('Origin', '*')
+    resp.headers['Access-Control-Allow-Credentials'] = True
+    resp.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS, GET, PUT, DELETE'
+    resp.headers['Access-Control-Allow-Headers'] = flask.request.headers.get('Access-Control-Request-Headers',
+                                                                             'Authorization')
+    # set low for debugging
+
+    if app.debug:
+        resp.headers["Access-Control-Max-Age"] = '1'
+    return resp
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
