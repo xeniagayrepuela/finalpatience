@@ -39,10 +39,16 @@ def getalltasks():
         recs.append({"id": r[0], "title": r[1], "description": r[2], "done": str(r[3])})
     return jsonify({'status': 'ok', 'entries': recs, 'count': len(recs)})
 
+@app.route('/tasks/<int:id>/<string:title>/<string:description>/<string:done>')
+def inserttask(id, title, description, done):
+    
+    res = spcall("newtask", (id, title, description, done=='true'), True)
+
+    if 'Error' in res[0][0]:
+        return jsonify({'status': 'error', 'message': res[0][0]})
+
+    return jsonify({'status': 'ok', 'message': res[0][0]})
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
 
