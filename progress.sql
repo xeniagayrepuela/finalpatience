@@ -36,3 +36,13 @@ $$
  language 'sql';
  
 --select * from gettasks();
+
+create or replace function gettaskid(in par_id int8, out text, out text, out boolean) returns setof record as
+$$
+   select title, description, done from tasks where id = par_id;
+
+$$
+ language 'sql';
+ 
+--select * from gettaskid(2);
+
