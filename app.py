@@ -2,6 +2,7 @@
 from flask import Flask, jsonify
 from flask.ext.httpauth import HTTPBasicAuth
 from model import DBconn
+import flask
 import sys
 
 app = Flask(__name__)
