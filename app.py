@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 from flask.ext.httpauth import HTTPBasicAuth
 from model import DBconn
 import flask
-import sys
+import os,sys
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -71,5 +71,7 @@ def add_cors(resp):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.debug = True
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 

@@ -1,0 +1,102 @@
+commit cabaf2d5fbc653b0c6f98dd8714a5db2660b6aff
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:34:49 2015 +0800
+
+    [NEW!] Created function to respond when button is clicked on the UI.
+
+commit 8d2297dae3f0595051a6840d1c8898f8324afbea
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:34:04 2015 +0800
+
+    [NEW!] Redesigned index.html incorporating basic bootstrap components.
+
+commit 0879430d1feb8492d9d376f6e9d17d082cc3f7e3
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:33:34 2015 +0800
+
+    [NEW] Added Bootstrap UI components.
+
+commit 823f7b74c0875bec3ab0c515d0dd3cc3da3f12fa
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:01:23 2015 +0800
+
+    [NEW!] Implementing Authentication CLient Side.
+
+commit 58e0fce75fa546121279e16190d92403e6803dba
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:00:59 2015 +0800
+
+    [UPDATE!] Implementing authentication server side.
+
+commit 88702ad0ab89d6f2ae63f8cf26e6b01dcb4ee2b5
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 01:00:32 2015 +0800
+
+    [NEW!] Defining Authentication Model.
+
+commit d613aa01a508cc7637279d5a37fae422f3d4d9a9
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:43:29 2015 +0800
+
+    [UPDATE!] Enabled Cross-Origin Resource Sharing.
+
+commit 2926f0b754dcd0d61e795ff99c5bb1efdf039100
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:38:42 2015 +0800
+
+    [NEW!] Added jQuery for doing ajax call with a sample ajax call in app.js
+
+commit 587e25d2f577d5af89451bfc445c8a76749af805
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:24:05 2015 +0800
+
+    [NEW!] Added a router for adding new tasks.
+
+commit b46f1267cda18ed59c4ea9e0e022738a6f723e50
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:16:41 2015 +0800
+
+    [NEW!] REST Get all tasks.
+
+commit b089478c0b00a25ae21c2672ea6799682d0fa6ed
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:05:37 2015 +0800
+
+    [UPDATE!] Added a function for dealing with stored proc.
+
+commit 51f5308e03df8eac60cabe5b4f87a0cc5e1bfe58
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Sat Oct 3 00:04:33 2015 +0800
+
+    [NEW!] Added Model.
+
+commit d382bf2dc8ab5c24a825eb1e9c3112fcea3b41fa
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Fri Oct 2 23:59:36 2015 +0800
+
+    [NEW!] Added a stored proc for select a specific task with ID.
+    TYPO: Previous stored proc is for returning many records.
+
+commit 8393d3b3c0060b9a594bb89c8715db06aedcc2b3
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Fri Oct 2 23:58:26 2015 +0800
+
+    [NEW!] Added a stored proc for inserting new data.
+
+commit d734ff4b3a20fce31ac78a28621fb977586f87bf
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Fri Oct 2 23:52:36 2015 +0800
+
+    [NEW!] Insert new record stored proc.
+
+commit eaa7f91207e5119d2ee09b3679a5513b53f65293
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Fri Oct 2 23:44:31 2015 +0800
+
+    [NEW!] Defininf the task table.
+
+commit 92afc353034e8db27cb97e0c31841d82ab06624c
+Author: Orven E. Llantos <orven.llantos@gmail.com>
+Date:   Fri Oct 2 23:40:53 2015 +0800
+
+    [NEW!] Hello World.
